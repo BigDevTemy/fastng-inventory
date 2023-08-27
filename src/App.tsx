@@ -14,8 +14,8 @@ function App() {
 
   return (
     <div>
-      {/* <RouterProvider router={router} /> */}
-      <div className='text-blue-500'>Temiloluwa</div>
+      <RouterProvider router={router} />
+   
     </div>
          
   

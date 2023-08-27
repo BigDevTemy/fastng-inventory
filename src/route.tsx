@@ -12,6 +12,11 @@ const router = createBrowserRouter([
         element: <Login/>,
         errorElement:<ErrorPage/>
       },
+      {
+        path: "/dashboard",
+        element: <div>Welcome To Dashboard</div>,
+        errorElement:<ErrorPage/>
+      },
   ]);
 
 
