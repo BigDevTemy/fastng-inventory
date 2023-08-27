@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import ErrorPage from './component/errorpage'
 import Login from './component/Login'
+import Dashboard from './component/dashboard'
 const router = createBrowserRouter([
     {
       path: "/",
@@ -13,8 +14,8 @@ const router = createBrowserRouter([
         errorElement:<ErrorPage/>
       },
       {
-        path: "/dashboard",
-        element: <div>Welcome To Dashboard</div>,
+        path: "/dashboard/app",
+        element: <Dashboard/>,
         errorElement:<ErrorPage/>
       },
   ]);

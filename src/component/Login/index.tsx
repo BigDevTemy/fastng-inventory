@@ -19,7 +19,7 @@ const Index = ():JSX.Element=>{
 
     useEffect(()=>{
       if(userdetails){
-        navigate('/dashboard')
+        navigate('/dashboard/app')
       }
 
     },[userdetails])
