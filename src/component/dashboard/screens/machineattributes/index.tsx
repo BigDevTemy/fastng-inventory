@@ -2,12 +2,16 @@ import { useSelector,useDispatch } from "react-redux"
 import { RootState } from "../../../../app/store"
 import illustrator from '../../../../assets/Illustration.svg'
 import { Button } from "antd"
+import AddMachineAttr from './AddMachineAttr'
+import {useState} from 'react'
 
 const Index = ()=>{
     const {machineattribute} = useSelector((state:RootState)=>state.machineattribute)
-
+    const [open, setopen] = useState<boolean>(false);
+    
     return(
         <div style={{width:'100%',minHeight:'100vh',height:'100%',backgroundColor:'#fff'}}>
+                <AddMachineAttr open={open} setopen={setopen}/>
                 {
                     !machineattribute && <div style={{width:'100%',height:'100%',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
                         <img src={illustrator} style={{width:'35%'}}/>
