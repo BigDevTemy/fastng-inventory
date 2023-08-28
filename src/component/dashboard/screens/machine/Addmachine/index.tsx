@@ -8,10 +8,12 @@ import { setMachine } from '../../../../../app/machine';
 interface AddMachineProps {
   setopen: (value: boolean) => void;
   open: boolean;
+  setdata:any
 }
 type AttributeType = string[];
-const Index: React.FC<AddMachineProps> = ({setopen,open}) => {
+const Index: React.FC<AddMachineProps> = ({setopen,open,setdata}) => {
   const {machinetype} = useSelector((state:RootState)=>state.machinetype)
+  const {machine} = useSelector((state:RootState)=>state.machine)
   const dispatch = useDispatch()
   const [getAttribute, setAttribute] = useState<AttributeType>([]);
   const [form] = Form.useForm()
@@ -32,6 +34,7 @@ const Index: React.FC<AddMachineProps> = ({setopen,open}) => {
       console.log(values)
       dispatch(setMachine(values))
       setopen(false)
+      setdata(machine)
       message.info('machine successfully created')
       form.resetFields();
       setAttribute([])
@@ -50,6 +53,7 @@ const Index: React.FC<AddMachineProps> = ({setopen,open}) => {
     );
     setAttribute(existingIndex[0].attribute)
     // console.log(existingIndex[0].attribute)
+    
     
   };
 
