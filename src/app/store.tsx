@@ -1,6 +1,9 @@
 import { configureStore,combineReducers } from '@reduxjs/toolkit'
 import messageReducer from './message'
 import userDetailsReducer from './userDetails'
+import machineattribute from './machineattribute'
+import machine from './machine'
+import machinetype from './machinetype'
 import storage from 'redux-persist/lib/storage';
 import { persistReducer, persistStore } from 'redux-persist';
 import thunk from 'redux-thunk';
@@ -11,7 +14,10 @@ const persistConfig = {
 
 const allReducers = combineReducers({
     message:messageReducer,
-    userdetails:userDetailsReducer
+    userdetails:userDetailsReducer,
+    machine:machine,
+    machineattribute:machineattribute,
+    machinetype:machinetype
 })
 
 

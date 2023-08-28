@@ -1,23 +1,11 @@
-import React, {useEffect} from "react";
 import {Menu} from "antd";
 import {Link} from "react-router-dom";
-
-
-
-import {useSelector} from "react-redux";
-import {CheckOutlined, HomeFilled} from "@ant-design/icons";
-
-
-
 
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 const Index = () => {
 
-
-
-   
-    // const defaultOpenKeys = selectedKeys.split('/')[1];
+       // const defaultOpenKeys = selectedKeys.split('/')[1];
 
     return (
         <>
@@ -36,7 +24,7 @@ const Index = () => {
 
 
                 <MenuItemGroup key="payroll" className="gx-menu-group"
-                               title={<div className="px-3 text-left text-white">Machine</div>}>
+                               title={<div className="px-3 text-left text-white"></div>}>
 
 
                     <SubMenu key="company"
@@ -45,7 +33,7 @@ const Index = () => {
 
                                     
                                  </div>
-                                 <div className="px-6 -my-3">Machine Management</div>
+                                 <div className="px-6 -my-3">Machine</div>
                              </div>}>
 
 
