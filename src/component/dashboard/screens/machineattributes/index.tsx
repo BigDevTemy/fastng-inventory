@@ -18,7 +18,7 @@ const Index = ()=>{
                             <div style={{fontFamily:'Poppins',fontSize:14,marginTop:10,color:'#222222'}}>
                                 No machine type created yet.
                             </div>
-                            <Button type="primary" style={{marginBottom:20,marginTop:10}}>Create Machine Attribute Type</Button>
+                            <Button type="primary" style={{marginBottom:20,marginTop:10}} onClick={()=>setopen(true)}>Create Machine Attribute Type</Button>
                     </div>
                 }
         </div>
